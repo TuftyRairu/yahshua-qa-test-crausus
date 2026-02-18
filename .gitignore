@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+env/
+.env
+
+# Django
+*.sqlite3
+local_settings.py
+media/
+staticfiles/
+
+# Node
+node_modules/
+dist/
+.npm
+*.tsbuildinfo
+
+# Docker
+.docker/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Test artifacts
+cypress/videos/
+cypress/screenshots/
+playwright-report/
+test-results/
+QA_TEST_MANUAL.md

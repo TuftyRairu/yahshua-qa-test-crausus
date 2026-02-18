@@ -1,0 +1,301 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "admin",
+      "email": "admin@payroll.test",
+      "password": "pbkdf2_sha256$600000$saltysalt$hashedpassword==",
+      "is_staff": true,
+      "is_superuser": true,
+      "is_active": true,
+      "first_name": "Admin",
+      "last_name": "User"
+    }
+  },
+  {
+    "model": "payroll_app.employee",
+    "pk": 1,
+    "fields": {
+      "first_name": "Juan",
+      "last_name": "Dela Cruz",
+      "email": "juan.delacruz@company.ph",
+      "position": "Junior Developer",
+      "department": "Engineering",
+      "employment_type": "regular",
+      "monthly_salary": "25000.00",
+      "date_hired": "2022-03-15",
+      "is_active": true,
+      "created_at": "2022-03-15T08:00:00Z",
+      "updated_at": "2022-03-15T08:00:00Z"
+    }
+  },
+  {
+    "model": "payroll_app.employee",
+    "pk": 2,
+    "fields": {
+      "first_name": "Maria",
+      "last_name": "Santos",
+      "email": "maria.santos@company.ph",
+      "position": "Senior Developer",
+      "department": "Engineering",
+      "employment_type": "regular",
+      "monthly_salary": "45000.00",
+      "date_hired": "2020-06-01",
+      "is_active": true,
+      "created_at": "2020-06-01T08:00:00Z",
+      "updated_at": "2020-06-01T08:00:00Z"
+    }
+  },
+  {
+    "model": "payroll_app.employee",
+    "pk": 3,
+    "fields": {
+      "first_name": "Jose",
+      "last_name": "Rizal",
+      "email": "jose.rizal@company.ph",
+      "position": "Engineering Manager",
+      "department": "Engineering",
+      "employment_type": "regular",
+      "monthly_salary": "85000.00",
+      "date_hired": "2018-01-10",
+      "is_active": true,
+      "created_at": "2018-01-10T08:00:00Z",
+      "updated_at": "2018-01-10T08:00:00Z"
+    }
+  },
+  {
+    "model": "payroll_app.employee",
+    "pk": 4,
+    "fields": {
+      "first_name": "Ana",
+      "last_name": "Garcia",
+      "email": "ana.garcia@company.ph",
+      "position": "Chief Technology Officer",
+      "department": "Executive",
+      "employment_type": "contractual",
+      "monthly_salary": "300000.00",
+      "date_hired": "2019-09-01",
+      "is_active": true,
+      "created_at": "2019-09-01T08:00:00Z",
+      "updated_at": "2019-09-01T08:00:00Z"
+    }
+  },
+  {
+    "model": "payroll_app.employee",
+    "pk": 5,
+    "fields": {
+      "first_name": "Pedro",
+      "last_name": "Gonzales",
+      "email": "pedro.gonzales@company.ph",
+      "position": "Intern",
+      "department": "Engineering",
+      "employment_type": "probationary",
+      "monthly_salary": "0.00",
+      "date_hired": "2024-01-08",
+      "is_active": true,
+      "created_at": "2024-01-08T08:00:00Z",
+      "updated_at": "2024-01-08T08:00:00Z"
+    }
+  },
+  {
+    "model": "payroll_app.payrollcalculation",
+    "pk": 1,
+    "fields": {
+      "employee": 1,
+      "period_month": 1,
+      "period_year": 2025,
+      "basic_salary": "25000.00",
+      "sss_employee": "1125.00",
+      "sss_employer": "2375.00",
+      "philhealth_employee": "625.00",
+      "philhealth_employer": "625.00",
+      "pagibig_employee": "200.00",
+      "pagibig_employer": "200.00",
+      "income_tax": "0.00",
+      "total_deductions": "1950.00",
+      "net_pay": "23050.00",
+      "created_at": "2025-01-31T09:00:00Z"
+    }
+  },
+  {
+    "model": "payroll_app.payrollcalculation",
+    "pk": 2,
+    "fields": {
+      "employee": 1,
+      "period_month": 2,
+      "period_year": 2025,
+      "basic_salary": "25000.00",
+      "sss_employee": "1125.00",
+      "sss_employer": "2375.00",
+      "philhealth_employee": "625.00",
+      "philhealth_employer": "625.00",
+      "pagibig_employee": "200.00",
+      "pagibig_employer": "200.00",
+      "income_tax": "0.00",
+      "total_deductions": "1950.00",
+      "net_pay": "23050.00",
+      "created_at": "2025-02-28T09:00:00Z"
+    }
+  },
+  {
+    "model": "payroll_app.payrollcalculation",
+    "pk": 3,
+    "fields": {
+      "employee": 2,
+      "period_month": 1,
+      "period_year": 2025,
+      "basic_salary": "45000.00",
+      "sss_employee": "900.00",
+      "sss_employer": "1900.00",
+      "philhealth_employee": "1125.00",
+      "philhealth_employer": "1125.00",
+      "pagibig_employee": "200.00",
+      "pagibig_employer": "200.00",
+      "income_tax": "1875.00",
+      "total_deductions": "4100.00",
+      "net_pay": "40900.00",
+      "created_at": "2025-01-31T09:00:00Z"
+    }
+  },
+  {
+    "model": "payroll_app.payrollcalculation",
+    "pk": 4,
+    "fields": {
+      "employee": 2,
+      "period_month": 2,
+      "period_year": 2025,
+      "basic_salary": "45000.00",
+      "sss_employee": "900.00",
+      "sss_employer": "1900.00",
+      "philhealth_employee": "1125.00",
+      "philhealth_employer": "1125.00",
+      "pagibig_employee": "200.00",
+      "pagibig_employer": "200.00",
+      "income_tax": "1875.00",
+      "total_deductions": "4100.00",
+      "net_pay": "40900.00",
+      "created_at": "2025-02-28T09:00:00Z"
+    }
+  },
+  {
+    "model": "payroll_app.payrollcalculation",
+    "pk": 5,
+    "fields": {
+      "employee": 3,
+      "period_month": 1,
+      "period_year": 2025,
+      "basic_salary": "85000.00",
+      "sss_employee": "900.00",
+      "sss_employer": "1900.00",
+      "philhealth_employee": "2125.00",
+      "philhealth_employer": "2125.00",
+      "pagibig_employee": "200.00",
+      "pagibig_employer": "200.00",
+      "income_tax": "11250.00",
+      "total_deductions": "14475.00",
+      "net_pay": "70525.00",
+      "created_at": "2025-01-31T09:00:00Z"
+    }
+  },
+  {
+    "model": "payroll_app.payrollcalculation",
+    "pk": 6,
+    "fields": {
+      "employee": 3,
+      "period_month": 2,
+      "period_year": 2025,
+      "basic_salary": "85000.00",
+      "sss_employee": "900.00",
+      "sss_employer": "1900.00",
+      "philhealth_employee": "2125.00",
+      "philhealth_employer": "2125.00",
+      "pagibig_employee": "200.00",
+      "pagibig_employer": "200.00",
+      "income_tax": "11250.00",
+      "total_deductions": "14475.00",
+      "net_pay": "70525.00",
+      "created_at": "2025-02-28T09:00:00Z"
+    }
+  },
+  {
+    "model": "payroll_app.payrollcalculation",
+    "pk": 7,
+    "fields": {
+      "employee": 4,
+      "period_month": 1,
+      "period_year": 2025,
+      "basic_salary": "300000.00",
+      "sss_employee": "900.00",
+      "sss_employer": "1900.00",
+      "philhealth_employee": "2500.00",
+      "philhealth_employer": "2500.00",
+      "pagibig_employee": "200.00",
+      "pagibig_employer": "200.00",
+      "income_tax": "62500.00",
+      "total_deductions": "66100.00",
+      "net_pay": "233900.00",
+      "created_at": "2025-01-31T09:00:00Z"
+    }
+  },
+  {
+    "model": "payroll_app.payrollcalculation",
+    "pk": 8,
+    "fields": {
+      "employee": 4,
+      "period_month": 2,
+      "period_year": 2025,
+      "basic_salary": "300000.00",
+      "sss_employee": "900.00",
+      "sss_employer": "1900.00",
+      "philhealth_employee": "2500.00",
+      "philhealth_employer": "2500.00",
+      "pagibig_employee": "200.00",
+      "pagibig_employer": "200.00",
+      "income_tax": "62500.00",
+      "total_deductions": "66100.00",
+      "net_pay": "233900.00",
+      "created_at": "2025-02-28T09:00:00Z"
+    }
+  },
+  {
+    "model": "payroll_app.payrollcalculation",
+    "pk": 9,
+    "fields": {
+      "employee": 1,
+      "period_month": 12,
+      "period_year": 2024,
+      "basic_salary": "25000.00",
+      "sss_employee": "1125.00",
+      "sss_employer": "2375.00",
+      "philhealth_employee": "625.00",
+      "philhealth_employer": "625.00",
+      "pagibig_employee": "200.00",
+      "pagibig_employer": "200.00",
+      "income_tax": "0.00",
+      "total_deductions": "1950.00",
+      "net_pay": "23050.00",
+      "created_at": "2024-12-31T09:00:00Z"
+    }
+  },
+  {
+    "model": "payroll_app.payrollcalculation",
+    "pk": 10,
+    "fields": {
+      "employee": 2,
+      "period_month": 12,
+      "period_year": 2024,
+      "basic_salary": "45000.00",
+      "sss_employee": "900.00",
+      "sss_employer": "1900.00",
+      "philhealth_employee": "1125.00",
+      "philhealth_employer": "1125.00",
+      "pagibig_employee": "200.00",
+      "pagibig_employer": "200.00",
+      "income_tax": "1875.00",
+      "total_deductions": "4100.00",
+      "net_pay": "40900.00",
+      "created_at": "2024-12-31T09:00:00Z"
+    }
+  }
+]

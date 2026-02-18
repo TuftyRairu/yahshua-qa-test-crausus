@@ -1,0 +1,15 @@
+{
+  "name": "payroll-e2e-tests",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "playwright:test": "playwright test",
+    "playwright:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.2",
+    "@playwright/test": "^1.41.1"
+  }
+}
