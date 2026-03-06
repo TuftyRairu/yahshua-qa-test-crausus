@@ -7,7 +7,7 @@
 
 **Expected Result:** All 4 analytics cards should have consistent text alignment and font size — number centered at the top and label below it in uniform styling 
 **Actual Result:** The Average Monthly Salary card displays the number in a noticeably larger font size and its text alignment is inconsistent compared to the Active Employees, Payroll Records, and Departments cards
-**Evidence:** ![[Pasted image 20260306010125.png]]
+**Evidence:** ![image](images/Pasted image 20260306010125.png)
 
 ---
 
@@ -21,8 +21,8 @@
 
 **Expected Result:** The system should reject or strip out invalid special characters from all input fields and display a clean, user-friendly error message without any raw backend syntax 
 **Actual Result:** The system accepts special characters as valid input across all fields, and when validation does trigger, the error message exposes raw characters or syntax coming directly from the backend
-**Evidence:![[Pasted image 20260306111718.png]]**
-![[Pasted image 20260306111847.png]]
+**Evidence:![image](images/Pasted image 20260306111718.png]]**
+![image](images/Pasted image 20260306111847.png]]
 
 ---
 
@@ -38,7 +38,7 @@
 **Expected Result:** Dates after the present day should be disabled or unselectable in the date picker 
 **Actual Result:** Future dates can be selected and saved as the Date Hired without any validation error
 **Evidence:**
-![[Pasted image 20260306111941.png]]
+![image](images/Pasted image 20260306111941.png]]
 
 ---
 
@@ -56,7 +56,7 @@
 **Actual Result:** All input fields accept an unrestricted number of characters beyond the defined limits on both the Add Employee and Edit Employee forms, allowing excessively large inputs to be submitted and saved without any validation error
 
 **Evidence:**
-![[Pasted image 20260306121635.png]]
+![image](images/Pasted image 20260306121635.png]]
 
 ---
 
@@ -71,7 +71,7 @@
 **Expected Result:** The system should reject both negative and extremely large salary values with a clean validation error message, without exposing any backend details 
 **Actual Result:** Negative values are accepted and produce incorrect calculation results. Extremely large values cause a 500 Internal Server Error, displaying "Calculation failed." on the frontend while exposing Django version, Python version, server file paths, and full stack trace in the backend response
 **Evidence:**
-![[Pasted image 20260306112030.png]]
+![image](images/Pasted image 20260306112030.png]]
 
 ---
 
@@ -90,7 +90,7 @@
 **Actual Result:** Entering `0` in the Override Salary field is silently ignored. The system falls back to the employee's recorded monthly salary and proceeds to calculate payroll using the original salary as if no override was entered, with no error or warning displayed to the user
 
 **Evidence:**
-![[Pasted image 20260306141533.png]]
+![image](images/Pasted image 20260306141533.png]]
 
 ---
 
@@ -104,7 +104,7 @@
 
 **Expected Result:** Pag-IBIG employee share should be capped at ₱200.00 regardless of salary. The system should also warn or prevent calculation when total deductions exceed the basic salary **Actual Result:** Pag-IBIG is computed literally on the raw salary (e.g. ₱0.02 for a ₱1.00 salary) instead of applying the ₱200 cap, and the resulting Net Pay displays as a negative value (e.g. ₱-384.02 and ₱-168.42)
 **Evidence:**
-![[Pasted image 20260306122419.png]]
+![image](images/Pasted image 20260306122419.png]]
 
 ---
 
@@ -118,7 +118,7 @@
 **Expected Result:** The system should warn or restrict salary inputs that fall below the minimum government contribution thresholds before proceeding with the calculation 
 **Actual Result:** The system accepts the salary without any warning and proceeds to calculate using floor values without notifying the user
 **Evidence:**
-![[Pasted image 20260306130108.png]]
+![image](images/Pasted image 20260306130108.png]]
 
 ---
 
@@ -135,8 +135,8 @@
 **Expected Result:** The system should validate and reject extremely large salary values at the point of employee creation, or handle the calculation gracefully without crashing or exposing backend details 
 **Actual Result:** The system crashes with a 500 Internal Server Error, displays "Calculation failed." on the frontend, and exposes Django version, Python version, server file paths, and full stack trace in the backend response
 **Evidence:**
-![[Pasted image 20260306125507.png]]
-![[Pasted image 20260306125523.png]]
+![image](images/Pasted image 20260306125507.png]]
+![image](images/Pasted image 20260306125523.png]]
 
 ---
 
@@ -151,8 +151,8 @@
 **Expected Result:** The system should prevent or warn the user that the selected payroll period is before the employee's Date Hired and should not allow the calculation to proceed 
 **Actual Result:** The system proceeds without any warning, displaying a negative Basic Salary and a negative Net Pay with all government deductions showing ₱0.00
 **Evidence:**
-![[Pasted image 20260306125749.png]]
-![[Pasted image 20260306125826.png]]
+![image](images/Pasted image 20260306125749.png]]
+![image](images/Pasted image 20260306125826.png]]
 
 ---
 
@@ -167,7 +167,7 @@
 **Expected Result:** The system should not store or display payroll records with negative Basic Salary or Net Pay values 
 **Actual Result:** Multiple payroll history records display negative Basic Salary (e.g. ₱-10,000.00) and negative Net Pay (e.g. ₱-10,000.00) as a direct result of employees created with negative salaries via the API
 **Evidence:**
-![[Pasted image 20260306131538.png]]
+![image](images/Pasted image 20260306131538.png]]
 
 ---
 
@@ -183,7 +183,7 @@
 **Expected Result:** Both the POST and PUT endpoints should reject negative salary values and return a `400 Bad Request` or `422 Unprocessable Entity` response with a clear validation error 
 **Actual Result:** Both endpoints accept the negative salary value and successfully create or update the employee record without any validation error
 **Evidence:** 
-![[Pasted image 20260306012109.png]]
+![image](images/Pasted image 20260306012109.png]]
 
 ---
 
@@ -199,7 +199,7 @@
 **Expected Result:** A newly created employee should always default to `is_active: true`. The `is_active` field should either be ignored on creation or restricted from being set to `false` on both POST and PUT without going through a dedicated endpoint 
 **Actual Result:** Both the POST and PUT endpoints accept `is_active: false`, effectively creating ghost/inactive employee records that exist in the database but are invisible on the Employees page and excluded from the Dashboard count
 **Evidence:**
-![[Pasted image 20260306014302.png]]
+![image](images/Pasted image 20260306014302.png]]
 
 ---
 
@@ -216,8 +216,8 @@
 **Actual Result:** The employee record is not deleted from the database. Instead, the API sets `is_active` to `false` on the record. A subsequent GET request to `/api/employees/4/` still returns the employee data with `"is_active": false`, confirming the record still exists
 
 **Evidence:**
-![[Pasted image 20260306132753.png]]![[Pasted image 20260306132825.png]]
-![[Pasted image 20260306132849.png]]
+![image](images/Pasted image 20260306132753.png]]![[Pasted image 20260306132825.png]]
+![image](images/Pasted image 20260306132849.png]]
 
 ---
 
@@ -233,7 +233,7 @@
 **Actual Result:** The endpoint accepts future dates as valid input and successfully creates the employee record without any validation error
 
 **Evidence:**
-![[Pasted image 20260306144242.png]]
+![image](images/Pasted image 20260306144242.png]]
 
 ---
 
@@ -250,7 +250,7 @@
 **Actual Result:** Both endpoints accept strings beyond the defined character limits and successfully create or update the employee record without any validation error
 
 **Evidence:**
-![[Pasted image 20260306144439.png]]
+![image](images/Pasted image 20260306144439.png]]
 
 ---
 
@@ -266,4 +266,4 @@
 **Actual Result:** The endpoint accepts special characters as valid input across all fields and successfully creates the employee record without any validation error
 
 **Evidence:**
-![[Pasted image 20260306144530.png]]
+![image](images/Pasted image 20260306144530.png]]
