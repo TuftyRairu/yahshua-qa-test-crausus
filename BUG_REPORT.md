@@ -7,7 +7,7 @@
 
 **Expected Result:** All 4 analytics cards should have consistent text alignment and font size — number centered at the top and label below it in uniform styling 
 **Actual Result:** The Average Monthly Salary card displays the number in a noticeably larger font size and its text alignment is inconsistent compared to the Active Employees, Payroll Records, and Departments cards
-**Evidence:** ![image](images/Pasted image 20260306010125.png)
+**Evidence:** ![image](images/Pasted%20image%2020260306010125.png)
 
 ---
 
