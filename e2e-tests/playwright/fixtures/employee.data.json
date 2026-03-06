@@ -1,0 +1,30 @@
+{
+  "valid": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@company.com",
+    "position": "Software Engineer",
+    "department": "Engineering",
+    "employmentType": "regular",
+    "monthlySalary": "45000",
+    "dateHired": "2026-03-06"
+  },
+  "update": {
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "jane.doe@company.com",
+    "position": "QA Engineer",
+    "department": "Engineering",
+    "employmentType": "contractual",
+    "monthlySalary": "40000",
+    "dateHired": "2026-03-05"
+  },
+  "invalid": {
+    "specialCharNames": "/ / @#$%",
+    "invalidEmail": "testonly",
+    "negativeSalary": "-10000",
+    "zeroSalary": "0",
+    "extremelyLargeSalary": "9999999999",
+    "futureDateHired": "2099-01-01"
+  }
+}
