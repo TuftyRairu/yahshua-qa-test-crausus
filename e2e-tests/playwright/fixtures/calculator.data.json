@@ -1,0 +1,85 @@
+{
+  "boundaryValues": {
+    "zeroBracket": {
+      "monthlyEquivalent": "20833",
+      "annualEquivalent": 249996,
+      "expectedTaxBracket": "0%",
+      "expectedMonthlyTax": 0
+    },
+    "fifteenPercentStart": {
+      "monthlyEquivalent": "20834",
+      "annualEquivalent": 250008,
+      "expectedTaxBracket": "15%"
+    },
+    "fifteenPercentEnd": {
+      "monthlyEquivalent": "33333",
+      "annualEquivalent": 399996,
+      "expectedTaxBracket": "15%"
+    },
+    "twentyPercentStart": {
+      "monthlyEquivalent": "33334",
+      "annualEquivalent": 400008,
+      "expectedTaxBracket": "20%"
+    },
+    "twentyFivePercentStart": {
+      "monthlyEquivalent": "66667",
+      "annualEquivalent": 800004,
+      "expectedTaxBracket": "25%"
+    },
+    "thirtyPercentStart": {
+      "monthlyEquivalent": "166667",
+      "annualEquivalent": 2000004,
+      "expectedTaxBracket": "30%"
+    },
+    "thirtyFivePercentStart": {
+      "monthlyEquivalent": "666667",
+      "annualEquivalent": 8000004,
+      "expectedTaxBracket": "35%"
+    }
+  },
+  "mariaTestCase": {
+    "salary": 45000,
+    "sssEmployee": 900,
+    "philHealthEmployee": 1125,
+    "pagIbigEmployee": 200,
+    "incomeTax": 4208.33,
+    "totalDeductions": 6433.33,
+    "netPay": 38566.67
+  },
+  "highSalaryTestCase": {
+    "salary": 450000,
+    "sssEmployee": 900,
+    "philHealthEmployee": 2500,
+    "pagIbigEmployee": 200,
+    "incomeTax": 118541.67,
+    "totalDeductions": 122141.67,
+    "netPay": 327858.33
+  },
+  "months": [
+    "January", "February", "March", "April",
+    "May", "June", "July", "August",
+    "September", "October", "November", "December"
+  ],
+  "contributionRules": {
+    "sss": {
+      "employeeRate": 0.045,
+      "employerRate": 0.095,
+      "maxMSC": 20000,
+      "minMSC": 3000,
+      "maxEmployeeShare": 900
+    },
+    "philHealth": {
+      "totalRate": 0.05,
+      "employeeRate": 0.025,
+      "employerRate": 0.025,
+      "salaryFloor": 10000,
+      "salaryCeiling": 100000
+    },
+    "pagIbig": {
+      "employeeRate": 0.02,
+      "employerRate": 0.02,
+      "maxEmployeeShare": 200,
+      "maxEmployerShare": 200
+    }
+  }
+}
